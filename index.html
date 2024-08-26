@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>JEANSHM</title>
+</head>
+
+<body>
+    <div class=" flex">
+        <div class=" h-screen w-[25%] overflow-y-scroll overflow-x-hidden top-0 sticky ">
+            <h2 class="text-center pt-10 font-bold">LOGO</h2>
+            <div class="button mt-20 "></div>
+        </div>
+        <div class=" w-[75%]">
+
+            <div class=" flex justify-between mt-10 ml-5 w-[90%]">
+                <p class=" text-2xl">Jeans</p>
+                <p class=" text-2xl">
+                    <i class="fa-solid fa-cart-shopping pr-3"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </p>
+            </div>
+
+            <div class="h-screen ml-5 mt-8  w-[90%] bg-cover bg-[url(./images/jeans.jpg)]">
+                <p class="pl-5 text-6xl text-white pt-8">New arrivals</p>
+                <p class="pl-5  text-3xl text-white pt-5">COLLECTION 2016</p>
+                <button
+                    class=" text-xl text-white ml-5 mt-5 bg-black hover:text-black hover:bg-gray-400 py-2.5 px-4">SHOP
+                    NOW</button>
+            </div>
+            <p class="py-2 px-5 text-gray-400">8 items</p>
+            <div class="img flex  flex-wrap gap-5 ml-5 "></div>
+            <div class="bg-black w-[94%] py-6 px-5 mt-5 ">
+                <p class="text-white text-3xl pt-6">Subscribe</p>
+                <p class="text-white pt-5">To get special offers and VIP treatment:</p>
+                <input class="mt-4 py-2 w-full" type="text" placeholder=" Enter Your mail">
+                <button class="px-6 mb-6 mt-5 py-2 bg-red-500 text-white hover:text-black hover:bg-gray-300">
+                    Subscribe</button>
+            </div>
+
+            <div class="bg-gray-100 w-[94%] flex  py-10 px-6">
+                <div class="Contact w-[30%]">
+                    <p class="text-center text-xl">Contact</p>
+                    <p class="text-center pt-4">Questions? Go ahead</p>
+                </div>
+                <div class="  w-[30%]">
+                    <p class="text-center text-xl pb-3">About</p>
+                    <ul class="ul">
+
+                    </ul>
+                </div>
+
+                <div class="  w-[30%]">
+                    <p class="text-center text-xl pb-3">Store</p>
+                    <ul class="ul2">
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="bg-black py-7 w-[94%] text-center">
+                <p class=" text-white ">Powered by <span
+                        class="underline cursor-pointer hover:text-gray-300 ">w3css</span></p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</body>
+<script>
+    let button = document.querySelector('.button');
+    let mydiv = document.querySelector('.img');
+    let mydiv1 = document.querySelector('.Contact');
+    let ul = document.querySelector('ul');
+    let ul2 = document.querySelector('.ul2');
+
+
+    let array = [
+        'Shirt', 'Dresses', 'Jeans  <i class=" fa-solid fa-caret-down "> </i> ', 'Jackets', 'Gymwear', 'Blaser', 'Shoes',
+        'contact', 'Newsletter', 'Subscribe'
+    ];
+
+    array.map((ele) => {
+        console.log(ele)
+        button.innerHTML += ` <p class=" ml-16 "><button class=" text-left w-64  py-2 px-3 hover:bg-gray-300 ">${ele}</button></p>  
+        `
+    });
+    let images = [
+        {
+            img: './images/jeans1.jpg',
+            name: 'Ripped Skinny Jeans',
+            price: '$24.99',
+
+        },
+        {
+            img: './images/jeans2.jpg',
+            name: 'Ripped Skinny Jeans',
+            price: '$24.99',
+        },
+        {
+            img: './images/jeans3.jpg',
+            name: 'Ripped Skinny Jeans',
+            price: '$24.99',
+        },
+        {
+            img: './images/jeans4.jpg',
+            name: 'Ripped Skinny Jeans',
+            price: '$24.99',
+        },
+        {
+            img: './images/jeans1.jpg',
+            name: 'Mega Ripped Jeans',
+            price: '$24.99',
+
+        },
+        {
+            img: './images/jeans2.jpg',
+            name: 'Mega Ripped Jeans',
+            price: '$24.99',
+        },
+        {
+            img: './images/jeans3.jpg',
+            name: 'Mega Ripped Jeans',
+            price: '$24.99',
+        },
+        {
+            img: './images/jeans4.jpg',
+            name: 'Mega Ripped Jeans',
+            price: '$24.99',
+        },
+    ];
+
+    images.map((ele) => {
+        mydiv.innerHTML += `
+        <div class=" w-[21.4%] h-[20%]">
+            <img class="grayscale" src="${ele.img}" alt="">
+            <p class="text-gray-400 pt-4">${ele.name}</p>
+            <p class="font-bold">${ele.price}</p>
+
+        </div>
+        `
+    });
+
+
+    const footerData = {
+        contact: ['Name', 'Email', 'Subject', 'Message'],
+        store: ['<i class="fa-solid fa-location-dot"></i>  company name ', '<i class="fa-solid fa-phone"></i>  03040453575', ' <i class="fa-regular fa-envelope"></i> gull@gmail.com', 'We accept', ' <i class="fa-brands fa-cc-amex"></i> Amex', ' <i class="fa-solid fa-credit-card"></i> Credit Card', '<i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i> <i class="fa-brands fa-square-snapchat"></i> <i class="fa-brands fa-pinterest-p"></i> <i class="fa-brands fa-square-twitter"></i> <i class="fa-brands fa-linkedin"></i>'],
+        about: [' about us ', 'we are hiring', 'supoort', 'find store', 'shipment', 'Payment', 'Gift card', 'Return', 'help']
+    }
+
+    footerData.contact.map((ele) => {
+        mydiv1.innerHTML += `
+    <div class="">
+    <input class=" w-full border py-1 mt-2 "type="text" placeholder=" ${ele}">
+    </div>
+    `
+
+    });
+    let messageBtn = document.createElement('button')
+    messageBtn.classList.add('w-full', 'py-2', 'bg-black', 'text-white', 'hover:bg-gray-300', 'hover:text-black', 'cursor-pointer', 'mt-2')
+    messageBtn.innerHTML = 'send'
+    mydiv1.appendChild(messageBtn)
+
+    footerData.about.forEach((ele) => {
+        ul.innerHTML += `
+    <li class="text-center py-0.5 underline ">${ele}</li>
+    `
+    });
+
+    footerData.store.forEach((ele) => {
+        ul2.innerHTML += `
+    <li class="text-center py-0.5 text-md ">${ele} 
+    </li>
+    `
+    });
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
